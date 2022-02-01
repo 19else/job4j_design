@@ -7,7 +7,6 @@ public class BackwardArrayIt implements Iterator<Integer> {
     private final int[] data;
     private int point = 0;
 
-
     public BackwardArrayIt(int[] data) {
         this.data = data;
     }

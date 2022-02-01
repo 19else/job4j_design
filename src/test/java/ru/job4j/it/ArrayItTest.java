@@ -1,13 +1,10 @@
 package ru.job4j.it;
 
 import org.junit.Test;
+import java.util.NoSuchElementException;
 
-import static org.hamcrest.Matchers.containsInAnyOrder;
 import static org.junit.Assert.assertThat;
 import static org.hamcrest.Matchers.is;
-import junit.framework.TestCase;
-
-import java.util.NoSuchElementException;
 
 public class ArrayItTest {
 
@@ -22,7 +19,7 @@ public class ArrayItTest {
 
     @Test
     public void whenReadSequence() {
-        ArrayIt it =new ArrayIt(
+        ArrayIt it = new ArrayIt(
                 new int[] {1, 2, 3}
         );
 
