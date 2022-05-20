@@ -12,7 +12,7 @@ public class MatrixIt implements Iterator<Integer> {
     /**
      * строка
      */
-    private int line = 0;
+    private int row = 0;
 
     public MatrixIt(int[][] data) {
         this.data = data;
@@ -20,18 +20,20 @@ public class MatrixIt implements Iterator<Integer> {
 
     @Override
     public boolean hasNext() {
-        while (line > data[line].length) {
-            column++;
+        while (row < data.length) {
+            if (column > data[row].length && row < data.length) {
+                row++;
+            }
         }
-        return column < data.length
-                && line < data[column].length;
+        return row < data.length
+                && column < data[row].length;
     }
 
     @Override
     public Integer next() {
-        int result;
-        result = data[column][line];
-        line++;
-        return result;
-    }
+        if (!hasNext()) {
+            throw new NoSuchElementException();
+        }
+            return data[row][column++];
+        }
 }
