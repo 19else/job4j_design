@@ -23,11 +23,11 @@ class EvenNumbersIteratorTest {
         assertThat(it.hasNext()).isTrue();
         assertThat(it.next()).isEqualTo(2);
         assertThat(it.hasNext()).isTrue();
-        assertThat(it.next()).isEqualTo(4);
-        assertThat(it.hasNext()).isTrue();
-        assertThat(it.next()).isEqualTo(6);
-        assertThat(it.hasNext()).isFalse();
-        assertThatThrownBy(it::next)
+       assertThat(it.next()).isEqualTo(4);
+       assertThat(it.hasNext()).isTrue();
+       assertThat(it.next()).isEqualTo(6);
+       assertThat(it.hasNext()).isFalse();
+       assertThatThrownBy(it::next)
                 .isInstanceOf(NoSuchElementException.class);
     }
 
