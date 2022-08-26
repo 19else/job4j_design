@@ -8,7 +8,7 @@ import static org.assertj.core.api.Assertions.*;
 public class ArrayItTest {
 
     @Test
-    public void whenMultiCallHasNextThenTrue() {
+     void whenMultiCallHasNextThenTrue() {
     ArrayIt it = new ArrayIt(
             new int[] {1, 2, 3}
     );
@@ -17,7 +17,7 @@ public class ArrayItTest {
     }
 
     @Test
-    public void whenReadSequence() {
+     void whenReadSequence() {
         ArrayIt it = new ArrayIt(
                 new int[] {1, 2, 3}
         );
