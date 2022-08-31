@@ -11,7 +11,7 @@ public class ArrayItTest {
     @Test
     void whenMultiCallHasNextThenTrue() {
         ArrayIt it = new ArrayIt(
-                new int[]{1, 2, 3}
+                 new int[]{1, 2, 3}
         );
         assertThat(it.hasNext()).isTrue();
         assertThat(it.hasNext()).isTrue();
