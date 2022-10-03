@@ -27,7 +27,7 @@ class SimpleConvertTest {
         List<String> array = simpleConvert.toList("first", "second", "three", "four", "five");
         assertThat(array).filteredOn(e -> e.startsWith("second")).first().isEqualTo("second");
         assertThat(array).filteredOnAssertions(e -> assertThat(e).isLessThanOrEqualTo("four"))
-                .contains("four", Index.atIndex(1 ))
+                .contains("four", Index.atIndex(1))
                 .hasSize(3)
                 .first().isEqualTo("first");
     }
